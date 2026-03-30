@@ -10,10 +10,7 @@
     <!-- NAVBAR -->
     <header class="navbar">
       <div class="logo">
-        <img
-          src="public/images/eliblogo.png"
-          alt="Caloocan City E-Library logo"
-        />
+        <img src="/images/eliblogo.png" alt="Caloocan City E-Library logo" />
       </div>
       <nav>
         <ul class="nav-links">
@@ -45,37 +42,29 @@
 
     <!-- HERO / VIDEO -->
     <section class="hero">
-      <iframe
-        src="https://www.youtube.com/embed/dyzNoC2J2mc?si=AfpZKf2cqWigv7mO"
-        title="Library Video"
-        allowfullscreen
-      ></iframe>
+      <iframe src="https://www.youtube.com/embed/dyzNoC2J2mc?si=AfpZKf2cqWigv7mO" title="Library Video" allowfullscreen></iframe>
     </section>
 
     <!-- WELCOME -->
     <section class="section">
       <h2>Welcome to Caloocan City E-Library</h2>
-      <p>
-        Empowering the community through accessible knowledge, digital
-        resources, and lifelong learning opportunities for all ages.
-      </p>
+      <p>Empowering the community through accessible knowledge, digital resources, and lifelong learning opportunities for all ages.</p>
     </section>
 
     <!-- MISSION & VISION -->
-    <section class="cards">
-      <div class="card">
-        <h3>Mission</h3>
-        <p>
-          To provide inclusive access to information and promote literacy in the
-          digital age.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Vision</h3>
-        <p>
-          A modern, innovative, and community-centered digital library for
-          everyone.
-        </p>
+    <section class="section mission-vision">
+      <h2>Mission & Vision</h2>
+      <div class="cards">
+        <div class="card mission-card">
+          <div class="mvcard-icon" aria-hidden="true">🎯</div>
+          <h3>Mission</h3>
+          <p>To provide library and information resources to the citizens in support of the educational plans and programs of the city.</p>
+        </div>
+        <div class="card vision-card">
+          <div class="mvcard-icon" aria-hidden="true">🌟</div>
+          <h3>Vision</h3>
+          <p>To enhance the educational, social and cultural development of the community through library and information services.</p>
+        </div>
       </div>
     </section>
 
@@ -84,20 +73,16 @@
       <h2>Facilities</h2>
       <div class="facility-row">
         <div class="facility-image">
-          <img
-            src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=900&q=80"
-            alt="Lounge"
-          />
+          <img src="/images/facilities/lounge.jpg" alt="Lounge" />
         </div>
         <div class="facility-text">
           <h2>Lounge</h2>
           <p>
-            Anyone who enters the Caloocan City E-Library will be accommodated
-            in a lounge where every reader will experience the feeling of having
-            a welcoming second home. Anyone may take a rest in the area and
-            newspapers are available for leisurely reading.
+            Anyone who enters the Caloocan City E-Library will be accommodated in a lounge where every reader will experience the feeling of having a welcoming second home. Anyone
+            may take a rest in the area and newspapers are available for leisurely reading for everyone's use.
+            <br />
+            <a href="#gallery-modal" class="btn btn-orange view-images" data-gallery="lounge">View more images</a>
           </p>
-          <a href="#" class="btn btn-orange">View more images</a>
         </div>
       </div>
 
@@ -105,21 +90,59 @@
         <div class="facility-text">
           <h2>Reading and Recreation Hub</h2>
           <p>
-            The modernization of the E-Library has a traditional heart. The
-            physical collections of the library and its sections such as
-            Filipiniana, Textbooks, Theses, and the like are still available for
-            room use.
+            The modernization of the E-Library has a traditional heart. The physical collections of the library and its sections such as Filipiniana, Textbooks, Theses, and the
+            like are still available for room use..
           </p>
-          <a href="#" class="btn btn-green">View more images</a>
+          <a href="#gallery-modal" class="btn btn-green view-images" data-gallery="reading">View more images</a>
         </div>
         <div class="facility-image">
-          <img
-            src="https://images.unsplash.com/photo-1517430816045-df4b7de1e79f?auto=format&fit=crop&w=900&q=80"
-            alt="Reading Hub"
-          />
+          <img src="/images/facilities/rrh.jpg" alt="Reading Hub" />
+        </div>
+      </div>
+
+      <div class="facility-row">
+        <div class="facility-image">
+          <img src="/images/facilities/childrens.jpg" alt="Children's Section" />
+        </div>
+        <div class="facility-text">
+          <h2>Children's Section</h2>
+          <p>
+            The E-Library also caters the children, as books for them are available in this section, and they can also learn while playing as there are also toys that they can use.
+            <br />
+            <a href="#gallery-modal" class="btn btn-orange view-images" data-gallery="childrens">View more images</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="facility-row reverse">
+        <div class="facility-text">
+          <h2>Computer Hub</h2>
+          <p>
+            The core of an E-Library is, of course, the computer. They are available in this section. Whatever the physical limitation of the library can be compensated for by
+            computers as they have digital resources or e-resources in the form of digital articles or books, and even magazines, available on the Internet. The e-resources are
+            available for everyone to use, whether for research or general reference.
+          </p>
+          <a href="#gallery-modal" class="btn btn-green view-images" data-gallery="computer">View more images</a>
+        </div>
+        <div class="facility-image">
+          <img src="/images/facilities/computer.jpg" alt="Computer Hub" />
         </div>
       </div>
     </section>
+
+    <!-- GALLERY MODAL -->
+    <div id="gallery-modal" class="modal" aria-hidden="true">
+      <div class="modal-overlay"></div>
+      <div class="modal-body" role="dialog" aria-modal="true" aria-label="Facility gallery">
+        <div class="modal-header">
+          <button class="modal-back" type="button">← Back</button>
+          <button class="modal-close" type="button" aria-label="Close gallery">✕</button>
+        </div>
+        <div class="modal-content">
+          <div id="modal-grid" class="modal-grid"></div>
+        </div>
+      </div>
+    </div>
 
     <!-- EVENTS -->
     <section class="section">
@@ -135,18 +158,20 @@
     <footer>
       <div class="footer-container">
         <div class="logos">
-          <img src="logo.png" alt="Library Logo" />
-          <img src="placeholder1.png" alt="Logo 2" />
-          <img src="placeholder2.png" alt="Logo 3" />
+          <img src="/images/CALOOCANSEAL.png" alt="Logo 1" />
+          <img src="/images/CCATO.png" alt="Logo 2" />
+          <img src="/images/eliblogo.png" alt="Logo 3" />
         </div>
 
         <div class="contact">
-          <p>📍 Caloocan City Library</p>
-          <iframe
-            src="https://maps.google.com/maps?q=caloocan%20city&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          ></iframe>
-          <p>📧 email@library.com</p>
-          <p>☎️ (02) 1234-5678</p>
+          <p>
+            📍 Caloocan City E-Library <br />
+            📧 calpubliclib346@gmail.com <br />
+            ☎️ 88044892
+          </p>
+          <a href="https://web.facebook.com/people/Caloocan-City-Public-Library/100066506418801/" target="_blank" rel="noopener noreferrer" class="facebook-btn"
+            >📘 Follow us on Facebook</a
+          >
         </div>
       </div>
     </footer>
@@ -163,6 +188,101 @@
             el.classList.add("fade-up");
           }
         });
+      });
+
+      // Facility gallery modal
+      const galleryModal = document.getElementById("gallery-modal");
+      const modalGrid = document.getElementById("modal-grid");
+      const closeButton = document.querySelector(".modal-close");
+      const backButton = document.querySelector(".modal-back");
+
+      const galleries = {
+        lounge: [
+          { src: "/images/facilities/l1.jpg", caption: "Caloocan City E-Library lounge area." },
+          { src: "/images/facilities/l2.jpg", caption: "Community corner for relaxation and reading." },
+          { src: "/images/facilities/l3.jpg", caption: "Suggestion Box for feedback and ideas." },
+          { src: "/images/facilities/l4.jpg", caption: "Locker area for personal items." },
+        ],
+        reading: [
+          { src: "/images/facilities/rrh1.jpg" },
+          { src: "/images/facilities/rrh2.jpg" },
+          { src: "/images/facilities/rrh3.jpg" },
+          { src: "/images/facilities/rrh4.jpg" },
+          { src: "/images/facilities/rrh5.jpg" },
+          { src: "/images/facilities/rrh6.jpg" },
+          { src: "/images/facilities/rrh7.jpg" },
+          { src: "/images/facilities/rrh8.jpg" },
+          { src: "/images/facilities/rrh9.jpg" },
+        ],
+        childrens: [
+          { src: "/images/facilities/ca1.jpg", caption: " Children's Area" },
+          { src: "/images/facilities/ca2.jpg", caption: "Children's Section with books and toys." },
+          { src: "/images/facilities/ca3.jpg", caption: "Colorful and inviting space for young readers." },
+          { src: "/images/facilities/ca4.jpg", caption: "Dedicated area for children's learning and play." },
+        ],
+
+        computer: [
+          { src: "/images/facilities/com1.jpg", caption: "Computer Lab with Books" },
+          { src: "/images/facilities/com2.jpg", caption: "Modern computer setup" },
+          { src: "/images/facilities/com3.jpg", caption: "High-speed internet access" },
+          { src: "/images/facilities/comp4.jpg", caption: "Computer Lab with Books" },
+          { src: "/images/facilities/com5.jpg", caption: " Spacious computer area for research and study." },
+          { src: "/images/facilities/com6.jpg", caption: " Free Printing Service" },
+        ],
+      };
+
+      let activeGallery = null;
+
+      const renderGalleryGrid = () => {
+        const items = galleries[activeGallery];
+        if (!items || !items.length) {
+          modalGrid.innerHTML = "<p>No images available.</p>";
+          return;
+        }
+
+        modalGrid.innerHTML = items
+          .map(
+            (image) =>
+              `<div class="modal-grid-item"><img src="${image.src}" alt="${image.caption || ""}" />${image.caption ? `<div class="modal-grid-caption">${image.caption}</div>` : ""}</div>`,
+          )
+          .join("");
+      };
+
+      const openGallery = (galleryKey) => {
+        activeGallery = galleryKey;
+        renderGalleryGrid();
+        galleryModal.classList.add("show");
+        galleryModal.setAttribute("aria-hidden", "false");
+      };
+
+      const closeGallery = () => {
+        galleryModal.classList.remove("show");
+        galleryModal.setAttribute("aria-hidden", "true");
+      };
+
+      document.querySelectorAll(".view-images").forEach((button) => {
+        button.addEventListener("click", (event) => {
+          event.preventDefault();
+          const galleryKey = button.dataset.gallery;
+          openGallery(galleryKey);
+        });
+      });
+
+      [closeButton, backButton].forEach((button) => {
+        button.addEventListener("click", () => closeGallery());
+      });
+
+      galleryModal.addEventListener("click", (event) => {
+        if (event.target.classList.contains("modal-overlay")) {
+          closeGallery();
+        }
+      });
+
+      window.addEventListener("keydown", (event) => {
+        if (!galleryModal.classList.contains("show")) return;
+        if (event.key === "Escape") closeGallery();
+        if (event.key === "ArrowLeft") prevButton.click();
+        if (event.key === "ArrowRight") nextButton.click();
       });
     </script>
   </body>
