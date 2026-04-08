@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computer Room Guidelines | Caloocan City E-Library</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body class="guidelines-page">
+    <header class="navbar">
+      <div class="logo">
+        <img src="/images/eliblogo.png" alt="Caloocan City E-Library logo" />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="guidelines.html" class="active">Guidelines</a></li>
+          <li class="dropdown">
+            <a href="#">Services &#x25BE;</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Book Borrowing</a></li>
+              <li><a href="#">Online Access</a></li>
+              <li><a href="#">Research Help</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Resources &#x25BE;</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">E-books</a></li>
+              <li><a href="#">Journals</a></li>
+              <li><a href="#">Archives</a></li>
+            </ul>
+          </li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero hero-guidelines fade-up">
+        <div class="hero-copy">
+          <span class="section-tag">Computer Room Safety</span>
+          <h1>Library Guidelines, Rules & Regulations</h1>
+          <p>
+            Discover the computer room policies with clear photos and friendly
+            instructions. These rules keep the e-library safe, quiet, and
+            welcoming for every learner.
+          </p>
+          <div class="hero-buttons">
+            <a href="index.html" class="btn btn-green">Back to Home</a>
+            <a href="#rule-grid" class="btn btn-orange">View Rules</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <figure class="hero-card">
+            <img
+              src="/images/facilities/computer.jpg"
+              alt="Computer room workstations"
+            />
+            <figcaption class="hero-card-text">
+              <strong>Computer Room Guidelines</strong>
+              <span
+                >Respect equipment, maintain quiet, and share the space.</span
+              >
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section guidelines-intro fade-up">
+        <h2>Photo Gallery of Library Rules and Computer Room Use</h2>
+        <p>
+          See real images from the computer room and the library environment to
+          make the rules easier to remember and follow.
+        </p>
+      </section>
+
+      <section class="photo-grid fade-up">
+        <figure class="photo-card">
+          <img
+            src="/images/facilities/computer.jpg"
+            alt="Computer room seating"
+          />
+          <figcaption>Proper computer room seating and spacing</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img
+            src="/images/facilities/computer1.jpg"
+            alt="Library computer desks"
+          />
+          <figcaption>Workstations ready for quiet study</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img
+            src="/images/facilities/comp4.jpg"
+            alt="Computer room equipment"
+          />
+          <figcaption>Keep equipment clean and handled carefully</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img
+            src="/images/facilities/ca1.jpg"
+            alt="Study area and computer sign"
+          />
+          <figcaption>Observe posted rules and follow instructions</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="/images/facilities/ca2.jpg" alt="Library computer zones" />
+          <figcaption>
+            Respect the computer room zones and keep noise low
+          </figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="/images/facilities/ca3.jpg" alt="Library computer room" />
+          <figcaption>Share the space fairly with others</figcaption>
+        </figure>
+      </section>
+
+      <section class="section rule-section fade-up" id="rule-grid">
+        <h2>Computer Room Rules for Everyone</h2>
+        <div class="rule-grid">
+          <article class="rule-card">
+            <span class="rule-badge">Quiet Space</span>
+            <h3>Keep your voice low</h3>
+            <p>
+              Speak softly and avoid loud conversations. The computer room is a
+              shared study area and quiet focus helps everyone.
+            </p>
+          </article>
+          <article class="rule-card">
+            <span class="rule-badge">No Food</span>
+            <h3>Avoid food and drinks</h3>
+            <p>
+              Food and beverages can damage the computers and keyboards. Bring
+              only water in a closed container if needed.
+            </p>
+          </article>
+          <article class="rule-card">
+            <span class="rule-badge">Respect Equipment</span>
+            <h3>Use devices gently</h3>
+            <p>
+              Handle mice, keyboards, and screens with care. Report any broken
+              or malfunctioning equipment to staff immediately.
+            </p>
+          </article>
+          <article class="rule-card">
+            <span class="rule-badge">Log Out</span>
+            <h3>Sign out after your session</h3>
+            <p>
+              Always log out of your account and close applications before
+              leaving to protect your privacy and prepare the station for the
+              next user.
+            </p>
+          </article>
+          <article class="rule-card">
+            <span class="rule-badge">Time Limit</span>
+            <h3>Follow the usage limit</h3>
+            <p>
+              Respect the time limits set for computer use so others can also
+              work and learn without waiting for an available workstation.
+            </p>
+          </article>
+          <article class="rule-card">
+            <span class="rule-badge">Be Helpful</span>
+            <h3>Ask staff for assistance</h3>
+            <p>
+              If you are unsure about the rules or need help using a computer,
+              please ask library staff. They are there to support you.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const revealItems = document.querySelectorAll(".fade-up");
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+      revealItems.forEach((item) => revealObserver.observe(item));
+    </script>
+  </body>
+</html>
