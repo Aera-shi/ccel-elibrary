@@ -105,11 +105,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   gap: 30px;
-  background: linear-gradient(
-    135deg,
-    rgba(244, 238, 221, 0.5),
-    rgba(220, 236, 228, 0.5)
-  );
+  background: linear-gradient(135deg, rgba(244, 238, 221, 0.5), rgba(220, 236, 228, 0.5));
   border-radius: 24px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
@@ -245,6 +241,101 @@ body {
   transform: translateY(-8px) scale(1.02);
 }
 
+.services-hero {
+  max-width: 1000px;
+  margin: 0 auto 30px;
+  padding: 40px 40px 20px;
+  text-align: center;
+}
+
+.services-hero p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #40514a;
+  line-height: 1.8;
+}
+
+.services-cards {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.service-card {
+  min-height: 260px;
+}
+
+.service-icon {
+  font-size: 2.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 18px;
+  border-radius: 16px;
+  background: rgba(88, 129, 87, 0.12);
+  color: var(--green);
+}
+
+.service-gallery {
+  gap: 22px;
+}
+
+.qr-section {
+  background: rgba(232, 246, 233, 0.92);
+  padding: 40px 0 20px;
+}
+
+.qr-card {
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) 1fr;
+  gap: 28px;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px;
+  border-radius: 28px;
+  box-shadow: 0 16px 42px rgba(58, 90, 64, 0.12);
+  background: var(--white);
+}
+
+.qr-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  display: block;
+}
+
+.qr-copy h2 {
+  margin-bottom: 14px;
+  font-size: 2rem;
+}
+
+.qr-copy p {
+  line-height: 1.75;
+  color: #37503f;
+}
+
+.small-note {
+  margin-top: 14px;
+  color: #5c6c60;
+  font-size: 0.96rem;
+}
+
+.avail-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 18px;
+}
+
+.avail-list .card {
+  padding: 26px;
+}
+
+.avail-list .card h3 {
+  margin-bottom: 14px;
+}
+
 /* EVENTS SECTION */
 .events-section {
   max-width: 1200px;
@@ -261,17 +352,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(
-      circle at top right,
-      rgba(163, 177, 138, 0.25),
-      transparent 32%
-    ),
-    radial-gradient(
-      circle at bottom left,
-      rgba(88, 129, 87, 0.16),
-      transparent 28%
-    );
+  background: radial-gradient(circle at top right, rgba(163, 177, 138, 0.25), transparent 32%), radial-gradient(circle at bottom left, rgba(88, 129, 87, 0.16), transparent 28%);
   pointer-events: none;
 }
 
@@ -314,11 +395,7 @@ body {
   align-items: center;
   padding: 28px;
   border-radius: 24px;
-  background: linear-gradient(
-    135deg,
-    rgba(58, 90, 64, 0.96),
-    rgba(88, 129, 87, 0.88)
-  );
+  background: linear-gradient(135deg, rgba(58, 90, 64, 0.96), rgba(88, 129, 87, 0.88));
   color: #fff;
   text-align: left;
   box-shadow: 0 20px 35px rgba(36, 57, 40, 0.2);
@@ -743,8 +820,9 @@ footer {
 }
 
 .hero-visual {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
 }
 
 .hero-card {
@@ -767,11 +845,7 @@ footer {
   position: absolute;
   inset: auto 0 0;
   padding: 24px 24px 28px;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(14, 40, 24, 0.9) 100%
-  );
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(14, 40, 24, 0.9) 100%);
   color: #fff;
 }
 
@@ -819,11 +893,7 @@ footer {
   right: 0;
   bottom: 0;
   padding: 18px 16px;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.72) 100%
-  );
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.72) 100%);
   color: #fff;
   font-weight: 700;
   letter-spacing: 0.02em;
