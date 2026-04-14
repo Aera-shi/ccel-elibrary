@@ -105,7 +105,11 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   gap: 30px;
-  background: linear-gradient(135deg, rgba(244, 238, 221, 0.5), rgba(220, 236, 228, 0.5));
+  background: linear-gradient(
+    135deg,
+    rgba(244, 238, 221, 0.5),
+    rgba(220, 236, 228, 0.5)
+  );
   border-radius: 24px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
@@ -336,6 +340,28 @@ body {
   margin-bottom: 14px;
 }
 
+.avail-list .card .qr-code {
+  margin-top: 15px;
+  display: block;
+  border: 1px solid var(--accent-green);
+  border-radius: 8px;
+}
+
+.avail-list .card .register-section {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.avail-list .card .register-section p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.avail-list .card .how-to {
+  margin-top: 15px;
+  font-style: italic;
+}
+
 /* EVENTS SECTION */
 .events-section {
   max-width: 1200px;
@@ -352,7 +378,17 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top right, rgba(163, 177, 138, 0.25), transparent 32%), radial-gradient(circle at bottom left, rgba(88, 129, 87, 0.16), transparent 28%);
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(163, 177, 138, 0.25),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(88, 129, 87, 0.16),
+      transparent 28%
+    );
   pointer-events: none;
 }
 
@@ -395,7 +431,11 @@ body {
   align-items: center;
   padding: 28px;
   border-radius: 24px;
-  background: linear-gradient(135deg, rgba(58, 90, 64, 0.96), rgba(88, 129, 87, 0.88));
+  background: linear-gradient(
+    135deg,
+    rgba(58, 90, 64, 0.96),
+    rgba(88, 129, 87, 0.88)
+  );
   color: #fff;
   text-align: left;
   box-shadow: 0 20px 35px rgba(36, 57, 40, 0.2);
@@ -845,7 +885,11 @@ footer {
   position: absolute;
   inset: auto 0 0;
   padding: 24px 24px 28px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(14, 40, 24, 0.9) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(14, 40, 24, 0.9) 100%
+  );
   color: #fff;
 }
 
@@ -893,7 +937,11 @@ footer {
   right: 0;
   bottom: 0;
   padding: 18px 16px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.72) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.72) 100%
+  );
   color: #fff;
   font-weight: 700;
   letter-spacing: 0.02em;
