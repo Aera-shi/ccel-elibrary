@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Caloocan City E-Library</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <style>
+      .about-header {
+        max-width: 860px;
+        margin: 0 auto 40px;
+        text-align: center;
+      }
+      .about-header h1 {
+        margin: 18px 0 14px;
+      }
+      .download-btn {
+        margin-top: 24px;
+      }
+      .contact-section {
+        max-width: 1180px;
+        margin: 0 auto 50px;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 32px;
+        align-items: center;
+      }
+      .contact-card {
+        padding: 36px 34px;
+        border-radius: 32px;
+        background: white;
+        box-shadow: 0 30px 70px rgba(17, 39, 25, 0.12);
+      }
+      .contact-card h2 {
+        margin-bottom: 10px;
+      }
+      .contact-card p {
+        color: #37503f;
+        line-height: 1.8;
+        margin-bottom: 28px;
+      }
+      .contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 16px;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-size: 1rem;
+        color: #1f3a2d;
+      }
+      .contact-item span:first-child {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        font-size: 1.1rem;
+      }
+      .contact-map {
+        border-radius: 28px;
+        overflow: hidden;
+        box-shadow: 0 30px 70px rgba(17, 39, 25, 0.12);
+      }
+      .contact-map iframe {
+        width: 100%;
+        min-height: 380px;
+        border: 0;
+      }
+      @media (max-width: 920px) {
+        .contact-section {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="/images/eliblogo.png" alt="Caloocan City E-Library logo" />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="guidelines.html">Guidelines</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li class="dropdown">
+            <a href="#">Resources ?</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">E-books</a></li>
+              <li><a href="#">Journals</a></li>
+              <li><a href="#">Archives</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="active">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="about-header">
+          <span class="section-tag">Citizen's Charter</span>
+          <h1>View or Download the Citizen's Charter</h1>
+          <p>Preview the official charter first in your browser, then save a copy if you want.</p>
+          <div class="hero-buttons" style="justify-content: center; gap: 14px">
+            <a href="/files/LIBRARY QMS - ARTA Signages - 2026.pdf" target="_blank" rel="noopener" class="btn btn-green download-btn">View Citizen's Charter</a>
+            <a href="/files/LIBRARY QMS - ARTA Signages - 2026.pdf" download class="btn btn-orange download-btn">Download PDF</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section">
+        <div class="contact-card">
+          <h2>Contact Us</h2>
+          <p>Get in touch with us for any inquiries or assistance. We're here to help!</p>
+          <ul class="contact-list">
+            <li class="contact-item"><span>??</span><span>10th Avenue, Grace Park Caloocan City</span></li>
+            <li class="contact-item"><span>??</span><span>88044892</span></li>
+            <li class="contact-item"><span>??</span><span>calpubliclib346@gmail.com</span></li>
+            <li class="contact-item"><span>??</span><span>Caloocan City Public Library</span></li>
+            <li class="contact-item"><span>??</span><span>Caloocan Cultural Affairs and Tourism Office</span></li>
+          </ul>
+        </div>
+        <div class="contact-map">
+          <iframe src="https://maps.google.com/maps?q=Caloocan%20City%20Public%20Library&t=&z=14&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
