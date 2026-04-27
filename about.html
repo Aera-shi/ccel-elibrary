@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Caloocan City E-Library</title>
+    <title>About | Caloocan City E-Library</title>
+    <link rel="icon" href="/images/eliblogo.png " type="image/svg+xml" />
     <link rel="stylesheet" href="src/style.css" />
     <style>
       .about-header {
@@ -71,6 +72,25 @@
         min-height: 380px;
         border: 0;
       }
+      .org-chart {
+        max-width: 1180px;
+        margin: 0 auto 50px;
+        padding: 32px;
+        background: white;
+        border-radius: 32px;
+        box-shadow: 0 30px 70px rgba(17, 39, 25, 0.12);
+      }
+      .org-chart h2 {
+        margin-bottom: 20px;
+      }
+      .org-chart img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 24px;
+        max-height: 700px;
+        object-fit: contain;
+      }
       @media (max-width: 920px) {
         .contact-section {
           grid-template-columns: 1fr;
@@ -89,12 +109,7 @@
           <li><a href="guidelines.html">Guidelines</a></li>
           <li><a href="services.html">Services</a></li>
           <li class="dropdown">
-            <a href="#">Resources</a>
-            <ul class="dropdown-menu">
-              <li><a href="#">E-books</a></li>
-              <li><a href="#">Journals</a></li>
-              <li><a href="#">Archives</a></li>
-            </ul>
+            <a href="resources.html">Resources</a>
           </li>
           <li><a href="about.html" class="active">Contact Us</a></li>
         </ul>
@@ -152,6 +167,11 @@
             loading="lazy"
           ></iframe>
         </div>
+      </section>
+
+      <section class="section org-chart">
+        <h2>Meet Our Staff</h2>
+        <img src="/images/ORGCHART2026.png" alt="Organization chart of Caloocan City E-Library" />
       </section>
 
       <!-- FOOTER -->
