@@ -34,9 +34,14 @@ body {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
   z-index: 1000;
 }
+
 .logo img {
   max-height: 50px;
   width: auto;
+}
+
+.nav-menu {
+  display: flex;
 }
 
 .nav-links {
@@ -56,6 +61,37 @@ body {
 .nav-links a.active,
 .nav-links a:hover {
   background: var(--sand);
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 5px;
+  padding: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--green);
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
 }
 
 /* DROPDOWN (SMOOTH) */
@@ -106,11 +142,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   gap: 30px;
-  background: linear-gradient(
-    135deg,
-    rgba(244, 238, 221, 0.5),
-    rgba(220, 236, 228, 0.5)
-  );
+  background: linear-gradient(135deg, rgba(244, 238, 221, 0.5), rgba(220, 236, 228, 0.5));
   border-radius: 24px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
@@ -408,17 +440,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(
-      circle at top right,
-      rgba(163, 177, 138, 0.25),
-      transparent 32%
-    ),
-    radial-gradient(
-      circle at bottom left,
-      rgba(88, 129, 87, 0.16),
-      transparent 28%
-    );
+  background: radial-gradient(circle at top right, rgba(163, 177, 138, 0.25), transparent 32%), radial-gradient(circle at bottom left, rgba(88, 129, 87, 0.16), transparent 28%);
   pointer-events: none;
 }
 
@@ -461,11 +483,7 @@ body {
   align-items: center;
   padding: 28px;
   border-radius: 24px;
-  background: linear-gradient(
-    135deg,
-    rgba(58, 90, 64, 0.96),
-    rgba(88, 129, 87, 0.88)
-  );
+  background: linear-gradient(135deg, rgba(58, 90, 64, 0.96), rgba(88, 129, 87, 0.88));
   color: #fff;
   text-align: left;
   box-shadow: 0 20px 35px rgba(36, 57, 40, 0.2);
@@ -802,7 +820,16 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 20px;
+}
+
+.developer-credit {
+  width: 100%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.8rem;
+  margin-top: 10px;
 }
 
 .logos img {
@@ -838,6 +865,19 @@ footer {
   font-weight: 600;
   transition: background 0.3s ease;
   margin-top: 8px;
+}
+
+.facebook-btn:hover {
+  background: rgba(244, 225, 193, 0.8);
+}
+
+.developer-credit {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .facebook-btn:hover {
@@ -920,11 +960,7 @@ footer {
   position: absolute;
   inset: auto 0 0;
   padding: 24px 24px 28px;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(14, 40, 24, 0.9) 100%
-  );
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(14, 40, 24, 0.9) 100%);
   color: #fff;
 }
 
@@ -972,11 +1008,7 @@ footer {
   right: 0;
   bottom: 0;
   padding: 18px 16px;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.72) 100%
-  );
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.72) 100%);
   color: #fff;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -1103,13 +1135,50 @@ footer {
   }
 
   .navbar {
+    padding: 15px 20px;
+    border-radius: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
     flex-direction: column;
-    gap: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu.active {
+    max-height: 300px;
   }
 
   .nav-links {
     flex-direction: column;
-    align-items: center;
+    gap: 0;
+    padding: 15px 0;
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid rgba(58, 90, 64, 0.1);
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 20px;
+    border-radius: 0;
   }
 
   .events-section {
